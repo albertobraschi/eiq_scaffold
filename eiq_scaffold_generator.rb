@@ -1,4 +1,7 @@
 class EiqScaffoldGenerator < Rails::Generator::NamedBase
+  
+  IMAGES = %w( button_add.gif button_back.gif button_cancel.gif )
+  
   default_options :skip_timestamps => false, :skip_migration => false
 
   attr_reader   :controller_name,
@@ -61,6 +64,11 @@ class EiqScaffoldGenerator < Rails::Generator::NamedBase
       
       # CSS do admin
       m.template('admin.css', 'public/stylesheets/admin.css')
+      
+      # Images do CSS
+      for image in Dir.entries("./templates/images")
+        m.template("images/#{image}", "public/images/#{image}")
+      end
 
       m.dependency 'model', [name] + @args, :collision => :skip
 
@@ -78,7 +86,7 @@ class EiqScaffoldGenerator < Rails::Generator::NamedBase
   protected
     # Override with your own usage banner.
     def banner
-      "Usage: #{$0} scaffold ModelName [field:type, field:type]"
+      "Usage: #{$0} eiq_scaffold ModelName [field:type, field:type]"
     end
 
     def add_options!(opt)
