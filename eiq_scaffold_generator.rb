@@ -53,7 +53,13 @@ class EiqScaffoldGenerator < Rails::Generator::NamedBase
       # Layout and stylesheet.
       m.template('_form.html.erb', File.join('app/views', controller_class_path, controller_file_name, "_form.html.erb"))
       
+      # Layout admin e partials do admin
       m.template('admin.html.erb', 'app/views/layouts/admin.html.erb')
+      m.template('_admin_head.html.erb', 'app/views/layouts/_admin_head.html.erb')
+      m.template('_admin_menu.html.erb', 'app/views/layouts/_admin_menu.html.erb')
+      m.template('_admin_rodape.html.erb', 'app/views/layouts/_admin_rodape.html.erb')
+      
+      # CSS do admin
       m.template('admin.css', 'public/stylesheets/admin.css')
 
       m.dependency 'model', [name] + @args, :collision => :skip
