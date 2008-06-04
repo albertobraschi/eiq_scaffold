@@ -1,5 +1,7 @@
 class EiqScaffoldGenerator < Rails::Generator::NamedBase
-  IMAGES = ["button_add.gif", "button_back.gif", "button_cancel.gif", "button_delete.gif", "button_edit.gif", "button_help.gif", "button_key.gif", "button_msg_alert.gif", "button_msg_critical.gif", "button_msg_info.gif", "button_music.gif", "button_no.gif", "button_ok.gif", "button_ok2.gif", "button_photo.gif", "button_restrito.gif", "button_save.gif", "button_video.gif", "button_view.gif", "button_view2.gif", "hover.gif", "pass.gif", "user.gif"]
+  # IMAGES = ["button_add.gif", "button_back.gif", "button_cancel.gif", "button_delete.gif", "button_edit.gif", "button_help.gif", "button_key.gif", "button_msg_alert.gif", "button_msg_critical.gif", "button_msg_info.gif", "button_music.gif", "button_no.gif", "button_ok.gif", "button_ok2.gif", "button_photo.gif", "button_restrito.gif", "button_save.gif", "button_video.gif", "button_view.gif", "button_view2.gif", "hover.gif", "pass.gif", "user.gif"]
+  IMAGES = %w[button_add.gif button_back.gif button_cancel.gif button_delete.gif button_edit.gif button_help.gif button_key.gif button_msg_alert.gif button_msg_critical.gif button_msg_info.gif button_music.gif button_no.gif button_ok.gif button_ok2.gif button_photo.gif button_restrito.gif button_save.gif button_video.gif button_view.gif button_view2.gif hover.gif pass.gif user.gif]
+  
             
   default_options :skip_timestamps => false, :skip_migration => false
 
