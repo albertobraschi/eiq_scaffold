@@ -1,0 +1,34 @@
+<h1>Listando <%= plural_name %></h1>
+
+<%%= render :partial => 'shared/msgerro' %>
+
+<%%= link_to 'Novo <%= singular_name %>', new_<%= singular_name %>_path, :class => 'criar' %>
+
+<div class="clear"></div>
+
+<table>
+  <tr>
+<% for attribute in attributes -%>
+    <th><%= attribute.column.human_name %></th>
+<% end -%>
+<th></th>
+<th></th>
+<th></th>
+
+  </tr>
+
+<%% for <%= singular_name %> in @<%= plural_name %> %>
+  <tr class="<%%= cycle('odd', 'even') %>">
+<% for attribute in attributes -%>
+    <td><%%=h <%= singular_name %>.<%= attribute.name %> if <%= singular_name %>.<%= attribute.name %> %></td>
+<% end -%>
+    <td><%%= link_to 'Detalhar', <%= singular_name %>_path(<%= singular_name %>), :class => 'bt_detal' %></td>
+    <td><%%= link_to 'Editar', edit_<%= singular_name %>_path(<%= singular_name %>), :class => 'bt_edit' %></td>
+    <td><%%= link_to 'Apagar', <%= singular_name %>_path(<%= singular_name %>), :confirm => 'Você tem certeza?', :method => :delete, :class => 'bt_delete' %></td>
+  </tr>
+<%% end %>
+</table>
+
+<br />
+<%%= will_paginate @<%= plural_name %> %>
+

@@ -1,0 +1,15 @@
+<%%#= error_messages_for :<%= singular_name %> %>
+
+<%% form_for(@<%= singular_name %>) do |f| %>
+<% for attribute in attributes -%>
+  <p>
+    <b><%= attribute.column.human_name %></b><br />
+    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+	<%%= error_message_on '<%= singular_name %>', '<%= attribute.name %>' %>
+  </p>
+
+<% end -%>
+  <p>
+    <%%= f.submit nome_botao, :class => 'bt_save', :disable_with => 'Cadastrando...' %>
+  </p>
+<%% end %>
