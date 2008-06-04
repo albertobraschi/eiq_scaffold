@@ -1,7 +1,9 @@
 class EiqScaffoldGenerator < Rails::Generator::NamedBase
-  
-  IMAGES = %w( button_add.gif button_back.gif button_cancel.gif )
-  
+  IMAGES = ["button_add.gif", "button_back.gif", "button_cancel.gif", "button_delete.gif", "button_edit.gif", 
+            "button_help.gif", "button_key.gif", "button_msg_alert.gif", "button_msg_critical.gif", "button_msg_info.gif",
+            "button_music.gif", "button_no.gif", "button_ok.gif", "button_ok2.gif", "button_photo.gif", "button_restrito.gif",
+            "button_save.gif", "button_video.gif", "button_view.gif", "button_view2.gif", "hover.gif", "pass.gif", "user.gif"]
+            
   default_options :skip_timestamps => false, :skip_migration => false
 
   attr_reader   :controller_name,
@@ -66,7 +68,7 @@ class EiqScaffoldGenerator < Rails::Generator::NamedBase
       m.template('admin.css', 'public/stylesheets/admin.css')
       
       # Images do CSS
-      for image in Dir.entries("templates/images")
+      for image in IMAGES
         m.template("images/#{image}", "public/images/#{image}")
       end
 
@@ -86,16 +88,16 @@ class EiqScaffoldGenerator < Rails::Generator::NamedBase
   protected
     # Override with your own usage banner.
     def banner
-      "Usage: #{$0} eiq_scaffold ModelName [field:type, field:type]"
+      "Usando: #{$0} eiq_scaffold NomeModel [campo:tipo, campo:tipo]"
     end
 
     def add_options!(opt)
       opt.separator ''
-      opt.separator 'Options:'
+      opt.separator 'Opcoes:'
       opt.on("--skip-timestamps",
-             "Don't add timestamps to the migration file for this model") { |v| options[:skip_timestamps] = v }
+             "Nao adicione timestamps na migration para este model") { |v| options[:skip_timestamps] = v }
       opt.on("--skip-migration",
-             "Don't generate a migration file for this model") { |v| options[:skip_migration] = v }
+             "Nao criar a migration para este model") { |v| options[:skip_migration] = v }
     end
 
     def scaffold_views
