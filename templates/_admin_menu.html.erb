@@ -1,0 +1,47 @@
+<ul id='menu'>
+	
+<% if current_user.has_role?('Agenda') || current_user.has_role?('Administrador') %>
+<li><a href='/agendas'>Agenda</a></li>
+<% end -%>
+
+<% if current_user.has_role?('Proponente') || current_user.has_role?('Administrador') %>
+<li><a href='/cartas'>Cartas Consulta</a></li>
+<li><a href='/projetos'>Projetos</a></li>
+<li><a href='/entidades'>Entidades</a></li>
+<li><a href='/responsavels'>Responsáveis</a></li>
+<li><a href='/participes'>Partícipes</a></li>
+<% end -%>
+
+<% if current_user.has_role?('AdminProponente') %>
+<li><a href='/orcamentos'>Orçamentos</a></li>
+<li><a href='/formularios'>Formulários</a></li>
+<li><a href='/statuses'>Status</a></li>
+<li><a href='/tipocartas'>Tipos de carta</a></li>
+<% end -%>
+
+<% if current_user.has_role?('SiteFACUAL') %>
+<li><a href='/facual/empresas/1'> O FACUAL</a></li>
+<li><a href='/facual/normas'>FACUAL - Normas</a></li>
+<li><a href='/facual/leis/show/1'>FACUAL - Leis</a></li>
+<li><a href='/facual/formularios'>FACUAL - Formulários</a></li>
+<li><a href='/noticias'>Notícias</a></li>
+<li><a href='/galerias'>Galerias</a></li>
+<li><a href='/links'>Links</a></li>
+<!-- <li><a href='/banners'>Banners</a></li>
+<li><a href='/equipes'>Equipe</a></li> -->
+<% end -%>
+
+<% if current_user.has_role?('SitePROALMAT') %>
+<li><a href='/proalmat/empresas/1'>O PROALMAT</a></li>
+<li><a href='/proalmat/normas'>PROALMAT - Normas</a></li>
+<li><a href='/proalmat/leis/show/2'>PROALMAT - Leis</a></li>
+<% end -%>
+
+<% if current_user.has_role?('Administrador') %>
+<li><a href='/cidades'>Cidades</a></li>	
+<li><a href='/estados'>Estados</a></li>
+<li><a href='/confs/1'>Configurações</a></li>
+<li><%= link_to 'Usuários', users_path %></li>
+<% end %>
+
+</ul>

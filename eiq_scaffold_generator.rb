@@ -53,8 +53,8 @@ class EiqScaffoldGenerator < Rails::Generator::NamedBase
       # Layout and stylesheet.
       m.template('_form.html.erb', File.join('app/views', controller_class_path, controller_file_name, "_form.html.erb"))
       
-      #m.template('layout.html.erb', File.join('app/views/layouts', controller_class_path, "#{controller_file_name}.html.erb"))
-      #m.template('style.css', 'public/stylesheets/scaffold.css')
+      m.template('admin.html.erb', 'app/views/layouts/admin.html.erb')
+      m.template('admin.css', 'public/stylesheets/admin.css')
 
       m.dependency 'model', [name] + @args, :collision => :skip
 

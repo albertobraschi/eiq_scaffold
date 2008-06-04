@@ -1,0 +1,8 @@
+<span>Você está logado como: </span>
+<%= link_to h(current_user.login.capitalize), user_path(current_user) %>
+<br />
+<ul class="list_admin">
+	<li><%= link_to 'Editar Perfil', edit_user_path(current_user) %></li>
+	<li><%= link_to 'Mudar senha', change_password_path %></li>
+	<li><%= link_to 'Sair', logout_url %></li>
+</ul>

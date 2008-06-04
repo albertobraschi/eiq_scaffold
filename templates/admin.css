@@ -1,0 +1,499 @@
+body {
+	font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+}
+
+body a:link, body a:visited {  text-decoration:none;	color: #333; font-weight: bold;}
+body a:hover { text-decoration: underline; color: #333}
+
+
+#topo {
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #2580A2;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+#rodape {
+	width: 100%;
+	height: 100px;
+	border-top: 1px solid #2580A2;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+#colunaesquerda{
+	margin-right: 10px;
+	padding: 0 10px 30px 0;
+	float: left;
+	border-right: 1px solid #CCC;
+}
+
+#colunacentro{
+	float: left;
+	width: 80%;
+}
+
+#colunacentro h1 {
+	background-color: #666;
+	color: #fff;
+	margin: 0;
+	padding: 0 5px;
+	font-size: 18px;
+}
+
+/*Botões e mensagens*/
+.mensagemerro {
+	width: 70%;
+	margin:10px 0 10px 0px;
+	padding: 5px 10px 5px 35px;
+	font-weight: bold;
+	color: red;
+	float: left;
+	background: #FFCCCC;
+	border: 1px solid red;
+	background-image: url("/images/button_msg_alert.gif");
+	background-position: 7px 2px;
+	background-repeat: no-repeat;
+}
+.mensagemok {
+	width: 70%;
+	margin:10px 0 10px 0px;
+	padding: 5px 10px 5px 35px;
+	font-weight: bold;
+	color: #249910;
+	float: left;
+	background: #FFF;
+	border: 1px solid #249910;
+	background-image: url("/images/button_ok.gif");
+	background-position: 7px 2px;
+	background-repeat: no-repeat;
+}
+.criar {
+	margin:10px 0 10px 10px;
+	padding: 5px 10px 5px 30px;
+	font-weight: bold;
+	color: green;
+	float: right;
+/*	background: #fff;*/
+	border: 1px solid #249910;
+	background-image: url("/images/button_add.gif");
+	background-position: 2px center;
+	background-repeat: no-repeat;}
+
+.criar a:link, .criar a:visited {  text-decoration:none;	color: #249910; display: block;}
+.criar a:hover { text-decoration:none; color: #249910}
+
+.bt_cancel {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_no.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+.bt_detal {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_view2.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+.bt_ok {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_ok2.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+.bt_delete {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_delete.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+.bt_edit {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_edit.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+.bt_photo {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_photo.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+	
+.bt_music {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_music.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+.bt_video {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_video.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+.bt_save {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+	border: 1px solid #249910;
+	color: green;
+/*	background: #fff;*/
+	background-image: url("/images/button_save.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+		
+.bt_back {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/button_back.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+	
+.bt_user {
+	margin:0 2px;
+	padding: 5px 2px 3px 23px;
+/*	background: #fff;*/
+	background-image: url("/images/user.gif");
+	background-position: 0px center;
+	background-repeat: no-repeat;}
+
+/*Menu*/
+#menu {
+	background: #333;
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 12em;
+}
+#menu li {
+	font: 100% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+#menu a {
+	background: #333;
+	border-bottom: 1px solid #393939;
+	color: #ccc;
+	display: block;
+	margin: 0;
+	padding: 8px 12px;
+	text-decoration: none;
+}
+#menu a:hover {
+	background: #2580a2 url("/images/hover.gif") left center no-repeat;
+	color: #fff;
+	padding-bottom: 8px;
+}
+
+
+
+/* Paginação */
+.pagination {
+  padding: 3px;
+  margin: 3px;
+}
+.pagination a {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #aaaadd;
+  text-decoration: none;
+  color: #000099;
+}
+.pagination a:hover, .pagination a:active {
+  border: 1px solid #000099;
+  color: #000;
+}
+.pagination span.current {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #000099;
+  font-weight: bold;
+  background-color: #000099;
+  color: #FFF;
+}
+.pagination span.disabled {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  border: 1px solid #eee;
+  color: #ddd;
+}
+
+/*Input, select, textarea*/
+
+input {
+	background:#FFFFFF;
+	border: 1px solid #666666;
+	padding:3px;
+	margin:1px 0 3px 0px;}
+
+input:focus {
+	border: 1px solid #666666;
+	background-color:#FFFFCC;}
+
+select  {
+	background:#FFFFFF;
+	border: 1px solid #666666;
+	padding:3px;
+	margin:1px 0 3px 0px;}
+	
+select:focus {
+	border: 1px solid #666666;
+	background-color:#FFFFCC;}
+
+textarea  {
+	background:#FFFFFF;
+	border: 1px solid #666666;
+	padding:3px;
+	margin:1px 0 3px 0px;}
+	
+textarea:focus {
+	border: 1px solid #666666;
+	background-color:#FFFFCC;}
+
+.clear {
+	clear: both;
+}
+
+fieldset { border:1px solid #666666; width: 200px; padding: 0 40px; margin:0 0 10px 30px; }
+
+.user {
+	background-image:url("/images/user.gif");
+	margin-bottom:5px;
+}
+.pass {
+	background-image:url("/images/pass.gif");
+}
+.logininput {
+	background-position:0px 1px;
+	background-repeat:no-repeat;
+	/*border:1px solid #4A7DAD;*/
+	color:#000000;
+	/*height:16px;*/
+	padding-left:17px;
+	/*width:145px;*/
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* ##### Header ##### */
+
+.superHeader {
+	color: #1A1A1A;
+	background-color: #fff;
+	text-align: right;
+	margin: 0;
+	padding: 0.5ex 10px;
+	font-weight: bold;
+}
+
+.superHeader span {
+	color: #999;
+	background-color: transparent;
+	
+}
+
+#header {
+	color: inherit;
+	background-color: rgb(184,38,25);
+}
+
+.headerTitle {
+	margin: 0;
+	padding: 0.25em 4mm 0.25em 0mm;
+}
+
+.headerTitle a {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+	font-size: 110%;  /* For MSIE */
+	font-weight: bold;
+	font-style: italic;
+}
+
+.headerTitle > a {
+	font-size: 138%;  /* For fully standards-compliant user agents */
+}
+
+.headerTitle span {
+	color: white;
+	background-color: transparent;
+	font-weight: normal;
+}
+
+.subHeader {
+	color: white;
+	background-color: #7590AE;
+	font-size: 109%;
+	text-align: center;
+	margin: 0;
+	padding: 0.5ex 0;
+}
+
+.subHeader a {
+	color: white;
+	background-color: #7590AE;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 1ex;
+}
+
+.subHeader a:hover {
+	color: black;
+	background-color: white;
+}
+
+
+
+
+
+/*tags*/
+
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }
+
+
+
+
+/*
+Theme: BakeSale admin
+Author: Matti Putkonen - FI3.fi
+Web site: http://www.fi3.fi/
+Icons from http://www.famfamfam.com/lab/icons/silk/
+*/
+
+table {
+border-collapse: collapse;
+border-spacing: 1px;
+}
+
+td, th {
+padding:6px 6px;
+border-bottom:solid 1px #eee;
+vertical-align:top;
+}
+
+table caption{
+background: #efefef;
+color: #333;
+text-align: center;
+font-size: 1.2em;
+line-height:3em;
+}
+
+thead th {
+background: #eee;
+border-bottom:solid 1px #ddd;
+border-top:solid 1px #fff;
+text-align:left;
+}
+
+tfoot td, tfoot th{
+background: #eee;
+border-bottom:solid 1px #fff;
+border-top:solid 1px #ccc;
+}
+
+tr.odd td, tr.odd th {
+background:#edf3fe;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+/* links */
+
+td a, td a:visited {
+padding-top:6px;
+padding-bottom:6px;
+margin-top:-6px;
+margin-bottom:-6px;
+}
+
+td a {
+color:#333;
+}
+
+td a:visited {
+color:#999;
+}
+
+tbody th a {
+padding-left:20px;
+color:#333;
+}
+
+tbody a[title^="Download"] { 
+padding-left: 20px;
+}
+
+.fieldcampos {
+	width: 90%;
+}
+
+.list_admin {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 50px;
+	overflow: hidden;
+}

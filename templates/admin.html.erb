@@ -1,0 +1,36 @@
+<%= render :partial => '/layouts/admin_head' %>
+
+<body>
+	<!-- Inicio Topo -->
+	<div id="topo">
+		<div class="superHeader" style="float:right">
+			<% if logged_in? %>
+
+				<%= render :partial => '/layouts/admin_logado' %>
+
+				<% else %>
+
+				<%= render :partial => '/layouts/menu_logout' %>
+
+				<% end %>
+			</div>
+			<div class="midHeader" style="float:left">
+				<h1 class="headerTitle" lang="en"><img src="/images/logo_topo_admin.png" alt="EIQ Consultoria" border="0" /></h1>
+			</div>
+		</div>
+		<!-- Fim Topo -->
+		<% if logged_in? %> 
+		<!-- Inicio colunaesquerda -->
+		<div id="colunaesquerda">
+			<%= render :partial => '/layouts/admin_menu' %>
+		</div>
+		<!-- Fim colunaesquerda -->
+		<% end %>
+		<!-- Inicio colunacentro -->
+		<div id="colunacentro">
+			<%= yield  %>
+		</div>
+		<!-- Fim colunacentro -->
+		<%= render :partial => '/layouts/admin_rodape' %>
+	</body>
+	</html>
