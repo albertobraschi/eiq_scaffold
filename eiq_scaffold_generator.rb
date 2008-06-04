@@ -1,7 +1,6 @@
 class EiqScaffoldGenerator < Rails::Generator::NamedBase
-  # IMAGES = ["button_add.gif", "button_back.gif", "button_cancel.gif", "button_delete.gif", "button_edit.gif", "button_help.gif", "button_key.gif", "button_msg_alert.gif", "button_msg_critical.gif", "button_msg_info.gif", "button_music.gif", "button_no.gif", "button_ok.gif", "button_ok2.gif", "button_photo.gif", "button_restrito.gif", "button_save.gif", "button_video.gif", "button_view.gif", "button_view2.gif", "hover.gif", "pass.gif", "user.gif"]
-  IMAGES = %w[button_add button_back button_cancel button_delete  button_edit  button_help  button_key  button_msg_alert  button_msg_critical  button_msg_info  button_music  button_no  button_ok  button_ok2  button_photo  button_restrito  button_save  button_video  button_view  button_view2  hover  pass  user ]
-  
+
+  IMAGES = %w[button_add button_back button_cancel button_delete  button_edit  button_help  button_key  button_msg_alert  button_msg_critical  button_msg_info  button_music  button_no  button_ok  button_ok2  button_photo  button_restrito  button_save  button_video  button_view  button_view2  hover  pass  user]
             
   default_options :skip_timestamps => false, :skip_migration => false
 
@@ -67,7 +66,7 @@ class EiqScaffoldGenerator < Rails::Generator::NamedBase
       m.template('admin.css', 'public/stylesheets/admin.css')
       
       # Images do CSS
-      for image in IMAGES
+      for image in EiqScaffoldGenerator::IMAGES
         m.template("images/#{image}.gif", "public/images/#{image}.gif")
       end
 
