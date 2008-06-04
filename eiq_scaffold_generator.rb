@@ -66,7 +66,7 @@ class EiqScaffoldGenerator < Rails::Generator::NamedBase
       m.template('admin.css', 'public/stylesheets/admin.css')
       
       # Images do CSS
-      for image in Dir.entries("./templates/images")
+      for image in Dir.entries("templates/images")
         m.template("images/#{image}", "public/images/#{image}")
       end
 
